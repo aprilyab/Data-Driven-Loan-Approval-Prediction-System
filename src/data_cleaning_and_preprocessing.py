@@ -9,7 +9,7 @@ def data_cleaning():
             
             # load the raw data
             df=pd.read_csv("data/raw/loan_approval_dataset.csv")
-            
+
             # drop missing values
             df.dropna(inplace=True)
 
@@ -53,6 +53,11 @@ def data_cleaning():
             df[" loan_status"]=df[" loan_status"].apply(lambda x: 1-x)
             # marge with the main data frame
             df=pd.concat([df.drop(columns=cat_cols),encoded_df],axis=1)
+
+            df[" self_employed"]=df[" self_employed_ Yes"]
+            df[" education"]=df[" education_ Not Graduate"]
+
+            df.drop(columns=[" education_ Not Graduate", " self_employed_ Yes"], inplace=True)
 
             df.to_csv("data/processed/processed_loan_approval_dataset.csv",index=False)
     
