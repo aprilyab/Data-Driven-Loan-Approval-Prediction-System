@@ -25,7 +25,7 @@ df, model, scaler = load_files(
 # Streamlit UI
 # ------------------------------
 st.title("Loan Approval Prediction App")
-st.image("data/raw/loan approval prediction system.jpeg", use_container_width=True)
+st.image("data/raw/loan approval prediction system.jpg", use_container_width=True)
 st.write("""
 This app predicts whether a **loan application will be approved** based on financial and personal features.
 """)
@@ -101,7 +101,7 @@ elif options == "Data Exploration":
     st.subheader("Sample Data")
     st.dataframe(df.head())
     st.write(f"Dataset shape: {df.shape}")
-    st.write(df.columns)
+    
 
     st.subheader("Feature Distribution")
     feature = st.selectbox("Select feature to visualize", df.columns)
