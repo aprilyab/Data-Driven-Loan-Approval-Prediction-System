@@ -25,7 +25,7 @@ df, model, scaler = load_files(
 # Streamlit UI
 # ------------------------------
 st.title("Loan Approval Prediction App")
-st.image("data/raw/loan approval prediction system.jpg", use_container_width=True)
+st.image("data/raw/loan_approval_rejection_prediction.jpg", use_container_width=True)
 st.write("""
 This app predicts whether a **loan application will be approved** based on financial and personal features.
 """)
