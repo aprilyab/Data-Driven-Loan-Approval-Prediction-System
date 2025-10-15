@@ -110,17 +110,31 @@ Data-Driven Loan Approval Prediction System/
 
 ## 📊 Model Evaluation
 
-| Model | Accuracy Score | Log Loss |
-|--------|----------------|----------|
-| Decision Tree | 0.9649 | 0.1770 |
-| Logistic Regression | 0.9110 | 0.2350 |
+| Model               | Accuracy Score | Log Loss | Precision | Recall | F1 Score |
+| ------------------- | -------------- | -------- | --------- | ------ | -------- |
+| Decision Tree       | 0.9649         | 0.1367   | 0.9941    | 0.9496 | 0.9714   |
+| Logistic Regression | 0.9110         | 0.2350   | 0.9475    | 0.9086 | 0.9276   |
+
 
 **Saved metrics:**
 ```json
 {
-  "Decision Tree": {"Accuracy Score": 0.9648711943793911, "Log Loss": 0.1770538263853407},
-  "Logistic Regression": {"Accuracy Score": 0.9110070257611241, "Log Loss": 0.23504903392632293}
+    "Decision Tree": {
+        "Accuracy Score": 0.9648711943793911,
+        "Log Loss": 0.13673273097938868,
+        "Precision": 0.994140625,
+        "Recall": 0.9496268656716418,
+        "F1 Score": 0.9713740458015268
+    },
+    "Logistic Regression": {
+        "Accuracy Score": 0.9110070257611241,
+        "Log Loss": 0.23504903392632287,
+        "Precision": 0.9474708171206225,
+        "Recall": 0.9085820895522388,
+        "F1 Score": 0.9276190476190476
+    }
 }
+
 ```
 
 The **Decision Tree** model was selected for deployment due to its higher accuracy and lower log loss.
